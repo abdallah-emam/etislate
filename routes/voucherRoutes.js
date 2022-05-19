@@ -44,7 +44,7 @@ router.post('/voucherDetails', vocherController.voucherDetails);
  * @swagger
  * tags:
  *   name: Voucher
- *   description: The Game managing API
+ *   description: The Voucher managing API
  */
 /**
  * @swagger
