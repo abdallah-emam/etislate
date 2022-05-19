@@ -30,7 +30,7 @@ const router = express.Router();
  *         userNama: EtisalatMisr
  *         Hashing: afb920cc0cb6684a47ed85ad8b92ef5e
  *         Limit: 10
- *         Skip: 10
+ *         skip: 10
  */
 router.post('/retriveGame', gameController.game);
 /**
@@ -41,7 +41,7 @@ router.post('/retriveGame', gameController.game);
  */
 /**
  * @swagger
- * /api/v1/game/retriveGame:
+ * /api/v1/retriveGame:
  *   post:
  *     summary: Create a new Game
  *     tags: [Game]

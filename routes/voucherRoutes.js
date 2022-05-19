@@ -48,12 +48,12 @@ router.post('/voucherDetails', vocherController.voucherDetails);
  */
 /**
  * @swagger
- * /api/v1/voucher/voucherDetails:
+ * /api/v1/voucherDetails:
  *   post:
  *     summary: Voucher Details
  *     tags: [Voucher]
  *     requestBody:
- *       required: true
+ *       required: Siu
  *       content:
  *         application/json:
  *           schema:
@@ -119,7 +119,7 @@ router.post('/voucherDetails', vocherController.voucherDetails);
 router.post('/reserveVoucher', vocherController.ReserveVoucher);
 /**
  * @swagger
- * /api/v1/voucher/reserveVoucher:
+ * /api/v1/reserveVoucher:
  *   post:
  *     summary: Reserve Voucher
  *     tags: [Voucher]
@@ -168,7 +168,7 @@ router.post('/reserveVoucher', vocherController.ReserveVoucher);
 router.post('/voucherRedeem', vocherController.RedeemVoucher);
 /**
  * @swagger
- * /api/v1/voucher/voucherRedeem:
+ * /api/v1/voucherRedeem:
  *   post:
  *     summary: Voucher Redeem
  *     tags: [Voucher]
@@ -217,7 +217,7 @@ router.post('/voucherRedeem', vocherController.RedeemVoucher);
 router.post('/ReleaseVoucher', vocherController.ReleaseVoucher);
 /**
  * @swagger
- * /api/v1/voucher/ReleaseVoucher:
+ * /api/v1/ReleaseVoucher:
  *   post:
  *     summary: Voucher Release
  *     tags: [Voucher]

@@ -47,7 +47,7 @@ exports.voucherDetails = catchAsync(async (req, res, next) => {
 exports.ReserveVoucher = catchAsync(async (req, res, next) => {
   res.status(201).json({
     status: 'success',
-    Success: 'true',
+    Success: true,
     VoucherStatus: 'Reserved',
     ReservationId: '6148c24afc2407ff0817f93f',
   });
