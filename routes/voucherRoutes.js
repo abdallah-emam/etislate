@@ -8,7 +8,7 @@ const router = express.Router();
  * @swagger
  * components:
  *   schemas:
- *     voucherDetails:
+ *     GetVoucherDetails:
  *       type: object
  *       required:
  *         - Username
@@ -33,13 +33,13 @@ const router = express.Router();
  *           type: init
  *           description: Skip number of items in the list
  *       example:
- *         userNama: EtisalatMisr
+ *         Username: EtisalatMisr
  *         Hashing: afb920cc0cb6684a47ed85ad8b92ef5e
  *         GameId: 2
  *         Limit: 10
  *         Skip: 10
  */
-router.post('/voucherDetails', vocherController.voucherDetails);
+router.post('/GetVoucherDetails', vocherController.voucherDetails);
 /**
  * @swagger
  * tags:
@@ -48,7 +48,7 @@ router.post('/voucherDetails', vocherController.voucherDetails);
  */
 /**
  * @swagger
- * /api/v1/voucherDetails:
+ * /api/GetVoucherDetails:
  *   post:
  *     summary: Voucher Details
  *     tags: [Voucher]
@@ -57,14 +57,14 @@ router.post('/voucherDetails', vocherController.voucherDetails);
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/voucherDetails'
+ *             $ref: '#/components/schemas/GetVoucherDetails'
  *     responses:
  *       200:
  *         description: done
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/voucherDetails'
+ *               $ref: '#/components/schemas/GetVoucherDetails'
  *       500:
  *         description: Some server error
  */
@@ -108,7 +108,7 @@ router.post('/voucherDetails', vocherController.voucherDetails);
  *           type: init
  *           description: Payment Method ID (1- ICB, 2-Wallet, 3-Credit Card, 4-Cash)
  *       example:
- *         userNama: EtisalatMisr
+ *         Username: EtisalatMisr
  *         Hashing: afb920cc0cb6684a47ed85ad8b92ef5e
  *         MSISDN: 01110334557
  *         VoucherList:
@@ -116,10 +116,10 @@ router.post('/voucherDetails', vocherController.voucherDetails);
  *             count:1}
  *         PayMethod: "2"
  */
-router.post('/reserveVoucher', vocherController.ReserveVoucher);
+router.post('/ReserveVoucher', vocherController.ReserveVoucher);
 /**
  * @swagger
- * /api/v1/reserveVoucher:
+ * /api/ReserveVoucher:
  *   post:
  *     summary: Reserve Voucher
  *     tags: [Voucher]
@@ -161,16 +161,16 @@ router.post('/reserveVoucher', vocherController.ReserveVoucher);
  *           type: string
  *           description: Reservation ID from the Reservation request
  *       example:
- *         userNama: EtisalatMisr
+ *         Username: EtisalatMisr
  *         Hashing: 8cec969f649a8ec6f4005cb1a8afd99a
  *         ReservationId: 6148c24afc2407ff0817f93f
  */
-router.post('/voucherRedeem', vocherController.RedeemVoucher);
+router.post('/RedeemVoucher', vocherController.RedeemVoucher);
 /**
  * @swagger
- * /api/v1/voucherRedeem:
+ * /api/RedeemVoucher:
  *   post:
- *     summary: Voucher Redeem
+ *     summary: Redeem Voucher
  *     tags: [Voucher]
  *     requestBody:
  *       required: true
@@ -210,16 +210,16 @@ router.post('/voucherRedeem', vocherController.RedeemVoucher);
  *           type: string
  *           description: Reservation ID from the Reservation request
  *       example:
- *         userNama: EtisalatMisr
+ *         Username: EtisalatMisr
  *         Hashing: afb920cc0cb6684a47ed85ad8b92ef5e
  *         ReservationId: 6148c24afc2407ff0817f93f
  */
 router.post('/ReleaseVoucher', vocherController.ReleaseVoucher);
 /**
  * @swagger
- * /api/v1/ReleaseVoucher:
+ * /api/ReleaseVoucher:
  *   post:
- *     summary: Voucher Release
+ *     summary: Release Voucher
  *     tags: [Voucher]
  *     requestBody:
  *       required: true

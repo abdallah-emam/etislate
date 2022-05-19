@@ -18,7 +18,7 @@ const options = {
     },
     servers: [
       {
-        url: 'https://polar-depths-77381.herokuapp.com/',
+        url: 'http://localhost:8000/',
       },
     ],
   },
@@ -38,8 +38,8 @@ if (process.env.NODE_ENV === 'development') {
 app.use(express.json()); // express.json({limit : '10kb'})
 
 // 3) ROUTES
-app.use('/api/v1/', voucherRouter);
-app.use('/api/v1/', gameRouter);
+app.use('/api/', voucherRouter);
+app.use('/api/', gameRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));

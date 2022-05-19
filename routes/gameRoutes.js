@@ -27,12 +27,12 @@ const router = express.Router();
  *           type: init
  *           description: Skip number of items in the list
  *       example:
- *         userNama: EtisalatMisr
+ *         Username: EtisalatMisr
  *         Hashing: afb920cc0cb6684a47ed85ad8b92ef5e
  *         Limit: 10
  *         skip: 10
  */
-router.post('/retriveGame', gameController.game);
+router.post('/RetrieveGames', gameController.game);
 /**
  * @swagger
  * tags:
@@ -41,7 +41,7 @@ router.post('/retriveGame', gameController.game);
  */
 /**
  * @swagger
- * /api/v1/retriveGame:
+ * /api/RetrieveGames:
  *   post:
  *     summary: Create a new Game
  *     tags: [Game]
