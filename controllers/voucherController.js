@@ -3,7 +3,8 @@ const catchAsync = require('../utils/catchAsync');
 
 exports.voucherDetails = catchAsync(async (req, res, next) => {
   res.status(201).json({
-    status: 'success',
+    Success: 'true',
+    ErrorCode: 0,
     data: {
       VoucherList: [
         {
@@ -46,15 +47,16 @@ exports.voucherDetails = catchAsync(async (req, res, next) => {
 });
 exports.ReserveVoucher = catchAsync(async (req, res, next) => {
   res.status(201).json({
-    status: 'success',
-    Success: true,
+    Success: 'true',
+    ErrorCode: 0,
     VoucherStatus: 'Reserved',
     ReservationId: '6148c24afc2407ff0817f93f',
   });
 });
 exports.RedeemVoucher = catchAsync(async (req, res, next) => {
   res.status(201).json({
-    status: 'success',
+    Success: 'true',
+    ErrorCode: 0,
     VoucherStatus: 'Reserved ',
     VoucherList: [
       {
@@ -66,5 +68,6 @@ exports.RedeemVoucher = catchAsync(async (req, res, next) => {
 exports.ReleaseVoucher = catchAsync(async (req, res, next) => {
   res.status(201).json({
     Success: 'true',
+    ErrorCode: 0,
   });
 });

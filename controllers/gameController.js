@@ -6,14 +6,16 @@ exports.addGame = catchAsync(async (req, res, next) => {
   const newGame = await Game.create(req.body);
 
   res.status(201).json({
-    status: 'success',
+    Success: 'true',
+    ErrorCode: 0,
     data: newGame,
   });
 });
 
 exports.game = catchAsync(async (req, res, next) => {
   res.status(201).json({
-    status: 'success',
+    Success: 'true',
+    ErrorCode: 0,
     data: [
       {
         gameId: 1,
