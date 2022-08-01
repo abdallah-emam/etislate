@@ -237,4 +237,107 @@ router.post('/ReleaseVoucher', vocherController.ReleaseVoucher);
  *       500:
  *         description: Some server error
  */
+// -------------------------------------------------------------------------------------------//
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     oneVoucherDetails:
+ *       type: object
+ *       required:
+ *         - Username
+ *         - Hashing
+ *         - voucherId
+ *       properties:
+ *         Username:
+ *           type: string
+ *           description: Username to be used by Server
+ *         Hashing:
+ *           type: string - MD5
+ *           description: “Username + Secret Key” hashed using MD5
+ *         voucherId:
+ *           type: string
+ *           description: Voucher ID from the Voucher Details request
+ *       example:
+ *         Username: EtisalatMisr
+ *         Hashing: afb920cc0cb6684a47ed85ad8b92ef5e
+ *         voucherId: 62ded7eb6610bde68f08d233
+ */
+router.post('/oneVoucherDetails', vocherController.oneVoucherDetails);
+/**
+ * @swagger
+ * /api/oneVoucherDetails:
+ *   post:
+ *     summary: one Voucher Details
+ *     tags: [Voucher]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/oneVoucherDetails'
+ *     responses:
+ *       200:
+ *         description: done
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/oneVoucherDetails'
+ *       500:
+ *         description: Some server error
+ */
+// -------------------------------------------------------------------------------------------//
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     popularVouchers:
+ *       type: object
+ *       required:
+ *         - Username
+ *         - Hashing
+ *         - Limit
+ *         - Skip
+ *       properties:
+ *         Username:
+ *           type: string
+ *           description: Username to be used by Server
+ *         Hashing:
+ *           type: string - MD5
+ *           description: “Username + Secret Key” hashed using MD5
+ *         Limit:
+ *           type: init
+ *           description: Limit for number of retrieved items in the list
+ *         Skip:
+ *           type: init
+ *           description: Skip number of items in the list
+ *       example:
+ *         Username: EtisalatMisr
+ *         Hashing: afb920cc0cb6684a47ed85ad8b92ef5e
+ *         Limit: 10
+ *         Skip: 10
+ */
+router.post('/popularVouchers', vocherController.popularVouchers);
+/**
+ * @swagger
+ * /api/popularVouchers:
+ *   post:
+ *     summary: Popular Vouchers Details
+ *     tags: [Voucher]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/popularVouchers'
+ *     responses:
+ *       200:
+ *         description: done
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/popularVouchers'
+ *       500:
+ *         description: Some server error
+ */
 module.exports = router;
